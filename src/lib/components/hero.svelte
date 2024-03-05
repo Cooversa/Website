@@ -25,7 +25,7 @@
 			</p>
 
 			<div class="mt-10 flex justify-center">
-				<a href="/apply" class="rounded-button bg-primary px-5 py-3 text-white hover:bg-primary/85">
+				<a href="/apply" class="rounded-button bg-primary px-5 py-3 text-white hover:bg-primary">
 					Start your application
 				</a>
 			</div>
@@ -43,7 +43,6 @@
 		background-size: cover;
 		background-position: center;
 		position: relative;
-		mix-blend-mode: luminosity;
 		transition: background-position 0.3s ease-in-out;
 	}
 
