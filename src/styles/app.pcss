@@ -1,0 +1,43 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn {
+		@apply rounded-button bg-primary px-4 py-2 font-bold text-white;
+	}
+
+	.form-label {
+		@apply mb-2 block text-sm font-bold text-gray-700;
+	}
+
+	.form-label::after {
+		content: ':';
+	}
+
+	.form-label.required::after {
+		content: '*';
+		@apply text-red-500;
+	}
+
+	.form-input {
+		@apply w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700;
+	}
+
+	.form-input.error {
+		@apply border-red-500;
+	}
+
+	.form-input:focus {
+		@apply outline-1 outline-primary;
+	}
+
+	.form-input::placeholder {
+		@apply text-gray-500;
+	}
+
+	.form-error {
+		@apply mt-1 text-sm text-red-500;
+	}
+}
