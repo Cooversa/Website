@@ -45,7 +45,7 @@ export const sendWelcomeEmail = async (data: { email: string; firstName: string 
 	const message: MailDataRequired = {
 		from: {
 			email: 'no-reply@cooversa.com',
-			name: 'Oluwaseyifunmi Oyefeso'
+			name: 'No Reply'
 		},
 		replyTo: 'support@mafflle.com.ng',
 		templateId: PRIVATE_SENDGRID_WELCOME_EMAIL_ID,
