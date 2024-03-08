@@ -6,6 +6,28 @@
 	import { saveStudent } from '../../lib/appwrite/student';
 	import type { PageData } from './$types';
 	import { toast } from 'svelte-sonner';
+	import axios from 'axios';
+
+	const addStudentToMailingList = async (student: any) => {
+		try {
+			await axios.post('/api/save-contact', {
+				...student
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
+	const sendWelcomeEmail = async (student: any) => {
+		try {
+			await axios.post('/api/send-welcome-email', {
+				email: student.email,
+				firstName: student.firstName
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
 	export let data: PageData;
 
@@ -18,7 +40,7 @@
 	<title>Apply Now | Cooversa</title>
 </svelte:head>
 
-<section class="container mx-auto px-5 py-10 md:px-10 md:py-20">
+<section class="container mx-auto max-w-5xl px-5 py-10 md:px-10 md:py-20">
 	<h1 class="text-2xl font-semibold sm:text-3xl">Apply for Cooversa!</h1>
 	<p class="text-sm leading-8">
 		Get started on your path to a high-paying job with our flexible and practical coding program.
@@ -47,6 +69,8 @@
 									if (response.status === 'success') {
 										saveStudent(result.data.body);
 										subtractCouponUsage(result.data.body.coupon);
+										addStudentToMailingList(result.data.body);
+										sendWelcomeEmail(result.data.body);
 										goto('/apply/success?firstName=' + result.data.body.firstName);
 									} else {
 										toast.error('Payment failed');

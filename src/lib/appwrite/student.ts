@@ -4,14 +4,14 @@ import {
 } from '$env/static/public';
 import { ID, database } from '.';
 
-type Student = {
+export type Student = {
 	firstName: string;
 	lastName: string;
 	email: string;
 	phone: string;
 	country: string;
 	education: string;
-	coupon: string;
+	coupon?: string;
 };
 
 export const saveStudent = async (student: Student) => {

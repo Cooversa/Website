@@ -9,7 +9,9 @@ const schema = z.object({
 	email: z.string({ required_error: 'Email is required' }),
 	phone: z
 		.string({ required_error: 'Phone number is required' })
-		.regex(/^\+\d{1,3}[0-9]{8,12}$/, { message: 'Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.' }),
+		.regex(/^\+\d{1,3}[0-9]{8,12}$/, {
+			message: "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
+		}),
 	country: z.string({ required_error: 'Country is required' }),
 	education: z.string({ required_error: 'Level of education is required' })
 });

@@ -36,7 +36,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sendgrid/client": "^8.1.1",
+		"@sendgrid/mail": "^8.1.1",
 		"appwrite": "^13.0.2",
+		"axios": "^1.6.7",
 		"gsap": "^3.12.5",
 		"iconify-icon": "^2.0.0",
 		"svelte-sonner": "^0.3.19",
