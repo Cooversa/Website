@@ -7,11 +7,9 @@ const schema = z.object({
 	firstName: z.string({ required_error: 'First name is required' }),
 	lastName: z.string({ required_error: 'Last name is required' }),
 	email: z.string({ required_error: 'Email is required' }),
-	phone: z
-		.string({ required_error: 'Phone number is required' })
-		.regex(/^\+\d{1,3}[0-9]{8,12}$/, {
-			message: "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
-		}),
+	phone: z.string({ required_error: 'Phone number is required' }).regex(/^\+\d{1,3}[0-9]{8,12}$/, {
+		message: "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
+	}),
 	country: z.string({ required_error: 'Country is required' }),
 	education: z.string({ required_error: 'Level of education is required' })
 });
@@ -30,22 +28,22 @@ type Error = {
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
-		const firstName = data.get('firstName');
-		const lastName = data.get('lastName');
-		const email = data.get('email');
-		const phone = data.get('phone');
-		const country = data.get('country');
-		const education = data.get('education');
-		const coupon = data.get('coupon');
+		const firstName = data.get('firstName') as string;
+		const lastName = data.get('lastName') as string;
+		const email = data.get('email') as string;
+		const phone = data.get('phone') as string;
+		const country = data.get('country') as string;
+		const education = data.get('education') as string;
+		const coupon = data.get('coupon') as string;
 
 		try {
 			const result = schema.parse({
-				...(firstName && { firstName: firstName }),
-				...(lastName && { lastName: lastName }),
-				...(email && { email }),
-				...(phone && { phone }),
-				...(country && { country }),
-				...(education && { education })
+				...(firstName && { firstName: firstName.trim() }),
+				...(lastName && { lastName: lastName.trim() }),
+				...(email && { email: email.trim() }),
+				...(phone && { phone: phone.trim() }),
+				...(country && { country: country.trim() }),
+				...(education && { education: education.trim() })
 			});
 
 			if (coupon) {
