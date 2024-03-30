@@ -57,7 +57,7 @@ export const actions = {
 							...result,
 							coupon
 						},
-						amount: 10000 - couponValid.amount
+						amount: 15000 - couponValid.amount
 					};
 				}
 			}
@@ -66,7 +66,7 @@ export const actions = {
 				body: {
 					...result
 				},
-				amount: 10000
+				amount: 15000
 			};
 		} catch (error) {
 			let errors: Error = {};

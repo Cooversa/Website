@@ -22,7 +22,7 @@
 			</div>
 			<div class="step-content">
 				<p class="step-description">
-					Pay a one-time application fee of 10k Naira to kickstart your coding journey.
+					Pay a one-time application fee of 15k Naira to kickstart your coding journey.
 				</p>
 			</div>
 		</div>

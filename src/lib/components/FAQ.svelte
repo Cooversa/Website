@@ -28,7 +28,7 @@
 			question: 'What is the application process like?',
 			html_answer: `
                 <ul class="space-y-3">
-                    <li><b>Apply:</b> Submit your online application form and pay the one-time application fee of 10k Naira.</li>
+                    <li><b>Apply:</b> Submit your online application form and pay the one-time application fee of 15k Naira.</li>
                     <li><b>Prepare:</b> Once accepted, you'll gain access to our foundational course, home study kit, and the supportive Cooversa community. This will equip you with the basic skills and knowledge needed for the program.</li>
                     <li><b>Trials:</b> Put your learning into practice by collaborating with other students on 3 real-world projects. You'll receive valuable feedback from your peers to enhance your skills.</li>
                     <li><b>Assessment:</b> To gauge your readiness for the program's intensity, you'll take an assessment based on the foundational course material.</li>
@@ -46,7 +46,7 @@
 			id: 5,
 			question: 'What is the application fee?',
 			answer:
-				'The application fee is a one-time payment of 10k Naira. This fee covers the assessment process and grants you access to the foundational course and community resources once accepted.'
+				'The application fee is a one-time payment of 15k Naira. This fee covers the assessment process and grants you access to the foundational course and community resources once accepted.'
 		},
 		{
 			id: 6,

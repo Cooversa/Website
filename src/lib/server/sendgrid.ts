@@ -44,8 +44,8 @@ export const addContact = async (student: Student) => {
 export const sendWelcomeEmail = async (data: { email: string; firstName: string }) => {
 	const message: MailDataRequired = {
 		from: {
-			email: 'oluwaseyifunmi@cooversa.com.ng',
-			name: 'Oluwaseyifunmi'
+			email: 'no-reply@cooversa.com.ng',
+			name: 'No Reply - Cooversa'
 		},
 		replyTo: 'support@cooversa.com.ng',
 		templateId: PRIVATE_SENDGRID_WELCOME_EMAIL_ID,

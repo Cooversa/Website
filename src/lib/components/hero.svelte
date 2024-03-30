@@ -13,7 +13,7 @@
 			<img src="guy-2.png" alt="" />
 		</div> -->
 		<div class="content relative z-10 mx-auto max-w-3xl text-center">
-			<h1 class="text-2xl font-semibold leading-snug sm:text-3xl">
+			<h1 class="text-3xl font-bold leading-snug md:text-4xl">
 				Launch Your Software Development Career -
 				<!-- <span class="text-[#FED924]"> -->
 				Pay When You Land a High-Paying Job
